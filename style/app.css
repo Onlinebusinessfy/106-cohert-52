@@ -1,0 +1,99 @@
+/* General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+/* Main layout */
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+}
+
+/* List and Form Sections */
+#list, #form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Section Titles */
+#list {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    color: #0066cc;
+}
+
+/* Form Styling */
+#form .form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+#form input[type="text"],
+#form input[type="datetime-local"],
+#form select {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+#form input[type="text"]:focus,
+#form input[type="datetime-local"]:focus,
+#form select:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.2);
+    outline: none;
+}
+
+/* Spacing Adjustments */
+.mt-3 {
+    margin-top: 1.5rem !important;
+}
+
+/* Button Styling */
+button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #0066cc;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 1rem;
+        justify-content: center;
+    }
+}
