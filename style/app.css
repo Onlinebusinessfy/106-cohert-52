@@ -1,99 +1,134 @@
-/* General settings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
 }
 
-body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+main {
+    display: flex;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    gap: 2rem; 
+    padding: 2rem;
+}
+
+/* Styling for List Section */
+#list {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     color: #333;
 }
 
-/* Main layout */
-main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
-}
-
-/* List and Form Sections */
-#list, #form {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-}
-
-/* Section Titles */
-#list {
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: center;
-    color: #0066cc;
-}
-
-/* Form Styling */
-#form .form-label {
+#list h2 {
     font-weight: bold;
     color: #555;
+    margin-bottom: 1rem;
 }
 
-#form input[type="text"],
-#form input[type="datetime-local"],
-#form select {
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    padding: 0.75rem;
-    transition: border-color 0.3s ease;
-    width: 100%;
+/* Styling for Form Section */
+#form {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
-#form input[type="text"]:focus,
-#form input[type="datetime-local"]:focus,
-#form select:focus {
-    border-color: #0066cc;
-    box-shadow: 0 0 5px rgba(0, 102, 204, 0.2);
-    outline: none;
-}
-
-/* Spacing Adjustments */
-.mt-3 {
-    margin-top: 1.5rem !important;
-}
-
-/* Button Styling */
-button {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 1.5rem;
-    border: none;
-    border-radius: 6px;
-    background-color: #0066cc;
-    color: #fff;
-    font-size: 1rem;
+#form h2 {
     font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
-button:hover {
-    background-color: #005bb5;
+/* Form Elements */
+.form-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.form-control, 
+.form-select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus, 
+.form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.task-container{
+    margin: 15px 0;
+    border-left: 4px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3 ease;
+}
+
+.task-container:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task .info{
+    flex: 3;
+}
+
+.task .info h5{
+    color: #1E90FF;
+    font-size: 18px;
+}
+
+.task .info p{
+    margin: 0;
+    color: #555555;
+    font-size: 16px;
+}
+
+.task .status{
+    background-color: #E6F2FF;
+    color: #1E90FF;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.date-budget{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 14px;
+    color: #777777;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
-        padding: 1rem;
-        justify-content: center;
+        gap: 1rem;
+    }
+    #list, #form {
+        flex: none;
+        width: 100%;
     }
 }
